@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+header{
+    color:rgb(221, 225, 231);
+    position: absolute; 
+    top: 8%; /*centralizar verticalmente*/
+    left: 49%; /*centralizar horizontalmente*/
+    transform: translate(-50%, -50%); 
+    width: auto;
+    height: auto;
+    font-weight: bold;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jost';
+    text-shadow: 1px 1px 3px #777;
+    display: flex;
+
+}
+
+.foto01, 
+.foto02, 
+.foto03, 
+.foto04, 
+.foto05, 
+.foto06, 
+.foto07{
+    position: absolute;
+    margin-top: 130px;
+    bottom: 0;
+    color: rgb(221, 225, 231);
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border-style: none;
+    text-shadow: 1px 1px 3px #777;
+    font-family: 'Jost';
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex; 
+    align-items: center;
+    background-size: cover;
+    overflow: hidden;
+    background: linear-gradient(30deg, rgb(24, 79, 150),  rgb(0, 0, 0), rgba(180, 25, 185, 0.692));
+}
+
+.container{ 
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    overflow: hidden;
+
+}
+
+.slider_div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 10px;
+    gap: 300px;
+   
+}           
+
+.imgContainer{
+    position:absolute; /*absolute pai e filho*/
+    width: 100%;
+    height: 600px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+img{
+    position: relative; /*rel*/
+    width: 240px;
+    height: 370px;
+    filter: saturate(10%);
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.button{
+    position: absolute; /*relative pai e filho*/
+    width: 240px;
+    height: 370px;
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+
+}
+
+.button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.not-found {
+    display: none; /* Inicialmente oculta a mensagem */
+    margin: 0 auto;
+    color: aliceblue;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px #777;
+    font-size: 25px;
+    font-family: 'Jost';
+  }
+
+#slider_1:target ~ .imgContainer #img1,
+#slider_1:target ~ .imgContainer #button1{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider_2:target ~ .imgContainer #img2,
+#slider_2:target ~ .imgContainer #button2{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider_3:target ~ .imgContainer #img3,
+#slider_3:target ~ .imgContainer #button3{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider_4:target ~ .imgContainer #img4,
+#slider_4:target ~ .imgContainer #button4{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider_5:target ~ .imgContainer #img5,
+#slider_5:target ~ .imgContainer #button5{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider_6:target ~ .imgContainer #img6,
+#slider_6:target ~ .imgContainer #button6{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider_7:target ~ .imgContainer #img7,
+#slider_7:target ~ .imgContainer #button7{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+footer {
+    color:rgb(148, 148, 148);
+    font-size: 10px;
+    width: 100%;
+    height: 18px;
+    position: absolute;
+    padding: 4px;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+  
+  footer::after {
+    content: '';
+    display: flex;
+    width: 100%;
+  }
+
+
+@media (min-width: 768px) and (max-width: 1080px) {
+    .container, .imgContainer, .body, .slider_div, .search-container{
+        width: 100%;
+        flex-direction: column; 
+ };
+}
